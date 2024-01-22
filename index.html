@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./lib/bootstrap.min.css">
+    <link rel="stylesheet" href="./main.css">
+    <title>Games</title>
+</head>
+<body>
+    <header>
+        <div class="navbar navbar-expand-lg">
+            <div class="container">
+                <h1>Melhores Games</h1>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon" ></span>
+                </button>
+                <nav class="collapse navbar-collapse justify-content-end" id="menu">
+                    <ul class="nav nav-pills">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Sair</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Login</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div id="carousel-exemplo" class="carousel slide" data-bs-ride="carousel"> <!--aqui definimos que vai ser carousel-->
+            <div class="carousel-inner">
+                <div data-bs-interval="1000" class="carousel-item active"> <!--colocamos active para dar start no carousel / interval= definir o tempo das imagens -->
+                    <img class="d-block w-100" src="https://meups.com.br/wp-content/uploads/2023/08/Industria-dos-Games-900x503.jpg"> <!--definimos display block e ocupal 100% com a class (d-block w-100)-->
+                    <div class="carousel-caption"><!--aqui vamos inserir texto na imagem-->
+                        <h2>Os melhores personagens</h2>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="https://gmedia.playstation.com/is/image/SIEPDC/the-crew-motorfest-hero-banner-desktop-01-en-30may23?$native$"> <!--definimos display block e ocupal 100% com a class (d-block w-100)-->
+                    <div class="carousel-caption"><!--aqui vamos inserir texto na imagem-->
+                        <h2>Os melhores carros</h2>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="https://hypandogames.com.br/wp-content/uploads/2023/10/img_0023-1-1024x576.jpg"> <!--definimos display block e ocupal 100% com a class (d-block w-100)-->
+                    <div class="carousel-caption"><!--aqui vamos inserir texto na imagem-->
+                        <h2>Os melhores exclusivos</h2>
+                    </div>
+                </div>
+            </div> 
+            <!-- abaixo colocamos um botão de retroceder (prev) a img do carousel-->
+            <button data-bs-target="#carousel-exemplo" data-bs-slide="prev" class="carousel-control-prev" type="button">
+                <span class="carousel-control-prev-icon"></span> 
+            </button>
+            <!-- abaixo colocamos um botão de avançar (next) a img do carousel-->
+            <button data-bs-target="#carousel-exemplo" data-bs-slide="next" class="carousel-control-next" type="button">
+                <span class="carousel-control-next-icon"></span> 
+            </button>
+            <div class="carousel-indicators"> <!--aqui vamos colocar botoes que mostram em qual slide o usuario esta vendo e quantos slides tem dentro do carousel-->
+                <button type="button" data-bs-target="#carousel-exemplo" class="active" data-bs-slide-to="0"></button>
+                <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="2"></button>
+            </div>
+        </div>
+    </div>
+    <div class="container tela">
+        <h1>Ranking Dos Melhores</h1>
+        <div class="container">
+            <div class="row"> <!--linha do boostrap-->
+                <div class="col-4"> <!--aqui definimos que das 12 colunas cada coluna vai ter o tamanho de 4 juntas (3 itens por linha 12/4=3) -->
+                    <article class="card text-bg-dark"> <!--mudamos de DIV para article para fica mais profissional para uma site de blog-->
+                        <header class="card-header"> <!--cabacalho do header-->
+                            1ª Posição
+                        </header>
+                        <img src="https://image.api.playstation.com/vulcan/ap/rnd/202210/0706/EVWyZD63pahuh95eKloFaJuC.png">
+                        <div class="card-body">
+                            <h4 class="card-title">RESIDENT EVIL 4</h4>
+                            <p class="card-text">
+                                Uma reinvenção arrepiante do clássico da Capcom que revolucionou os jogos de ação e terror.
+                            </p>
+                            <button class="btn btn-primary" onclick="toggleAudio('audio1', this)">Ouça</button>                            
+                            <audio id="audio1" src="./audios/resident_evil_4.mp3"></audio>
+                        </div>
+                        <footer class="card-footer"> <!--aqui defimos o rodapé do card-->
+                            postado em <time>22/01/2024 às 11:00:00</time>
+                        </footer>
+                    </article>
+                </div>
+                <div class="col-4"> <!--aqui definimos que das 12 colunas cada coluna vai ter o tamanho de 4 juntas (3 itens por linha 12/4=3) -->
+                    <article class="card text-bg-dark"> <!--mudamos de DIV para article para fica mais profissional para uma site de blog-->
+                        <header class="card-header"> <!--cabacalho do header-->
+                            2ª Posição
+                        </header>
+                        <img src="https://image.api.playstation.com/vulcan/img/rnd/202011/1021/X3WIAh63yKhRRiMohLoJMeQu.png">
+                        <div class="card-body">
+                            <h4 class="card-title">GOD OF WAR</h4>
+                            <p class="card-text">
+                                Nesse mundo duro e impiedoso que ele deve lutar para sobreviver enquanto ensina seu filho a fazer o mesmo e tenta impedi-lo de repetir os erros cruéis do Fantasma de Esparta.
+                            </p>
+                            <button class="btn btn-primary" onclick="toggleAudio('audio2', this)">Ouça</button>                            
+                            <audio id="audio2" src="./audios/god_of_war_4_ashes.mp3"></audio>
+                        </div>
+                        <footer class="card-footer"> <!--aqui defimos o rodapé do card-->
+                            postado em <time>22/01/2024 às 11:00:00</time>
+                        </footer>
+                    </article>
+                </div>
+                <div class="col-4"> <!--aqui definimos que das 12 colunas cada coluna vai ter o tamanho de 4 juntas (3 itens por linha 12/4=3) -->
+                    <article class="card text-bg-dark"> <!--mudamos de DIV para article para fica mais profissional para uma site de blog-->
+                        <header class="card-header"> <!--cabacalho do header-->
+                            3ª Posição
+                        </header>
+                        <img src="https://bk.ibxk.com.br/2023/08/24/24173536025175.jpg">
+                        <div class="card-body">
+                            <h4 class="card-title">SPIDER-MAN</h4>
+                            <p class="card-text">
+                                Esse não é o Spider-Man que você conheceu ou viu. Esse é um Peter Parker experiente e mais preparado para enfrentar a onda de crimes de Nova York. Em contrapartida, ele luta para conciliar sua vida pessoal e carreira caóticas enquanto o destino de milhões de nova-iorquinos pesa sobre seus ombros.
+                            </p>
+                            <button class="btn btn-primary" onclick="toggleAudio('audio3', this)">Ouça</button>                            
+                            <audio id="audio3" src="./audios/spiderman_intro.mp3"></audio>
+                        </div>
+                        <footer class="card-footer"> <!--aqui defimos o rodapé do card-->
+                            postado em <time>22/01/2024 às 11:00:00</time>
+                        </footer>
+                    </article>
+                </div>
+                <div class="col-4"> <!--aqui definimos que das 12 colunas cada coluna vai ter o tamanho de 4 juntas (3 itens por linha 12/4=3) -->
+                    <article class="card text-bg-dark"> <!--mudamos de DIV para article para fica mais profissional para uma site de blog-->
+                        <header class="card-header"> <!--cabacalho do header-->
+                            4ª Posição
+                        </header>
+                        <img src="https://image.api.playstation.com/cdn/UP0002/CUSA07402_00/03ZtrPdjasIxzi8QrzOb2zCIHLMydFbh.png">
+                        <div class="card-body">
+                            <h4 class="card-title">CRASH BANDICOOT</h4>
+                            <p class="card-text">
+                                Seu marsupial favorito, Crash Bandicoot™, está de volta! Ele está aprimorado, inspirado e preparado para a coleção de jogos da trilogia insana. Agora você pode experimentar Crash Bandicoot como nunca antes. Gire, pule, golpeie e repita conforme você enfrentar as aventuras e os desafios épicos através dos três jogos que deram início a tudo!
+                            </p>
+                            <button class="btn btn-primary" onclick="toggleAudio('audio4', this)">Ouça</button>                            
+                            <audio id="audio4" src="./audios/crash_bandicoot_menu.mp3"></audio>
+                        </div>
+                        <footer class="card-footer"> <!--aqui defimos o rodapé do card-->
+                            postado em <time>22/01/2024 às 11:00:00</time>
+                        </footer>
+                    </article>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    <script src="./lib/bootstrap.bundle.min.js"></script>
+    <script>        
+    var currentAudio = null;
+
+    function toggleAudio(audioId, button) {
+    var audio = document.getElementById(audioId);
+
+    if (currentAudio && currentAudio !== audio) {
+        currentAudio.pause();
+        if (currentAudio !== button) {
+        togglePlayPauseButton(currentAudio, 'play');
+        }
+    }
+
+    if (audio.paused) {
+        audio.play();
+        togglePlayPauseButton(button, 'pause');
+    } else {
+        audio.pause();
+        togglePlayPauseButton(button, 'play');
+    }
+
+    currentAudio = audio;
+    }
+
+    function togglePlayPauseButton(button, action) {
+    button.innerHTML = (action === 'pause') ? 'Pausar' : 'Ouça';
+    }
+    </script>
+</body>
+</html>
+
+
